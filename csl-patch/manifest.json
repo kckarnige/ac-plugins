@@ -1,0 +1,24 @@
+{
+    "name": "Custom Server Logos Patch",
+	"version": "1.0",
+    "author": "KayoticCarnige",
+    "description": "A patch that allows the Custom Server Logos theme to work as intended",
+    "background": {
+        "scripts": [
+            "CSP.js"
+        ]
+    },
+    "content_scripts": [
+        {
+          "matches": ["*://*.discord.com/*", "*://*.fosscord.com/*"],
+          "js": ["cslp.js"]
+        }
+      ],
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "*://*.discord.com/*",
+        "*://*.fosscord.com/*"
+    ],
+    "manifest_version": 2
+}
